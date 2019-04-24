@@ -4,14 +4,14 @@
       {
         "type": "endpoint",
         "name": "development",
-        "endpoint": "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/7e63f341-d2e8-47fa-baa6-9dba19d3dc79?verbose=true&timezoneOffset=-360&subscription-key=0c8e8a4762a945a284873cd66e47d1fc&q=",
+        "endpoint": "http://localhost:3978/api/messages",
         "appId": "",
         "appPassword": "",
         "id": "166"
       },
       {
         "type": "luis",
-        "name": "BotdoPedro-8e0c",
+        "name": "LuisBot",
         "appId": "7e63f341-d2e8-47fa-baa6-9dba19d3dc79",
         "authoringKey": "0c8e8a4762a945a284873cd66e47d1fc",
         "subscriptionKey": "0c8e8a4762a945a284873cd66e47d1fc",

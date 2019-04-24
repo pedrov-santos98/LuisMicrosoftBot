@@ -1,10 +1,16 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
+using Newtonsoft.Json;
+using static QnAMakerService;
 
 namespace Microsoft.BotBuilderSamples
 {
@@ -25,6 +31,9 @@ namespace Microsoft.BotBuilderSamples
         /// In the .bot file, multiple instances of LUIS can be configured.
         /// </summary>
         public static readonly string LuisKey = "LuisBot";
+        public const string ComputecnicaIntent = "Computecnica";
+
+        Answer ans = new Answer();
 
         private const string WelcomeText = "This bot will introduce you to natural language processing with LUIS. Type an utterance to get started";
 
@@ -46,16 +55,7 @@ namespace Microsoft.BotBuilderSamples
             }
         }
 
-        /// <summary>
-        /// Every conversation turn for our LUIS Bot will call this method.
-        /// There are no dialogs used, the sample only uses "single turn" processing,
-        /// meaning a single request and response, with no stateful conversation.
-        /// </summary>
-        /// <param name="turnContext">A <see cref="ITurnContext"/> containing all the data needed
-        /// for processing this conversation turn. </param>
-        /// <param name="cancellationToken">(Optional) A <see cref="CancellationToken"/> that can be used by other objects
-        /// or threads to receive notice of cancellation.</param>
-        /// <returns>A <see cref="Task"/> that represents the work queued to execute.</returns>
+
         public async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (turnContext.Activity.Type == ActivityTypes.Message)
@@ -63,9 +63,18 @@ namespace Microsoft.BotBuilderSamples
                 // Check LUIS model
                 var recognizerResult = await _services.LuisServices[LuisKey].RecognizeAsync(turnContext, cancellationToken);
                 var topIntent = recognizerResult?.GetTopScoringIntent();
+                var Itent = topIntent.Value.intent;
+
+
+                QnAMakerService qna = new QnAMakerService("https://luischatbotteste.azurewebsites.net", "3edfd898-ca35-444b-acc7-0d160c01fd1d", "fb4792a0-7297-4961-9c87-17db2a2b4e21");
+
+  
+
                 if (topIntent != null && topIntent.HasValue && topIntent.Value.intent != "None")
                 {
-                    await turnContext.SendActivityAsync($"==>LUIS Top Scoring Intent: {topIntent.Value.intent}, Score: {topIntent.Value.score}\n");
+                    var qnaMakerAnswer = await qna.GetAnswer(Itent);
+                    await turnContext.SendActivityAsync(qnaMakerAnswer);
+                    await turnContext.SendActivityAsync($"==>LUIS Top Scoring Intent: {topIntent.Value.intent}, Score: {ans.answer}\n");
                 }
                 else
                 {
