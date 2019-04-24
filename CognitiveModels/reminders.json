@@ -1,0 +1,127 @@
+{
+  "luis_schema_version": "3.2.0",
+  "versionId": "0.1",
+  "name": "BotdoPedro-8e0c",
+  "desc": "A LUIS model that uses intent and entities.",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "Cancel"
+    },
+    {
+      "name": "Computecnica"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Funcionario",
+      "roles": []
+    },
+    {
+      "name": "Qual é",
+      "roles": []
+    },
+    "composites",
+    [
+      {
+        "name": "Qual é",
+        "children": [
+          "Funcionario"
+        ],
+        "roles": []
+      }
+    ],
+    "closedLists",
+    [
+      {
+        "name": "Funcionario",
+        "subLists": [
+          {
+            "canonicalForm": "Pedro Santos",
+            "list": [
+              "pedro"
+            ]
+          },
+          {
+            "canonicalForm": "Rodrigo Dias",
+            "list": [
+              "rodrigo"
+            ]
+          },
+          {
+            "canonicalForm": "Guilherme Palange",
+            "list": [
+              "guilherme"
+            ]
+          }
+        ],
+        "roles": []
+      }
+    ],
+    "patternAnyEntities",
+    [],
+    "regex_entities",
+    [],
+    "prebuiltEntities",
+    [],
+    "model_features",
+    [],
+    "regex_features",
+    [],
+    "patterns",
+    [],
+    "utterances",
+    [
+      {
+        "text": "bye",
+        "intent": "Cancel",
+        "entities": []
+      },
+      {
+        "text": "cancel booking",
+        "intent": "Cancel",
+        "entities": []
+      },
+      {
+        "text": "contato com a empresa",
+        "intent": "Computecnica",
+        "entities": []
+      },
+      {
+        "text": "exit",
+        "intent": "Cancel",
+        "entities": []
+      },
+      {
+        "text": "ignore",
+        "intent": "Cancel",
+        "entities": []
+      },
+      {
+        "text": "nome do funcionario",
+        "intent": "Computecnica",
+        "entities": []
+      },
+      {
+        "text": "qual é o cargo do funcionário",
+        "intent": "Computecnica",
+        "entities": []
+      },
+      {
+        "text": "qual é o nome do funcionário",
+        "intent": "Computecnica",
+        "entities": []
+      },
+      {
+        "text": "qual é o sobrenome do funcionario",
+        "intent": "Computecnica",
+        "entities": []
+      }
+    ],
+    "settings",
+    []
+}

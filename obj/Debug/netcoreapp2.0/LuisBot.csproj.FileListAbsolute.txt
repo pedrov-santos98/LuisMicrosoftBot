@@ -1,0 +1,12 @@
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\bin\Debug\netcoreapp2.0\nlp-with-luis.bot
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\bin\Debug\netcoreapp2.0\LuisBot.deps.json
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\bin\Debug\netcoreapp2.0\LuisBot.runtimeconfig.json
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\bin\Debug\netcoreapp2.0\LuisBot.runtimeconfig.dev.json
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\bin\Debug\netcoreapp2.0\LuisBot.dll
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\bin\Debug\netcoreapp2.0\LuisBot.pdb
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\obj\Debug\netcoreapp2.0\LuisBot.csprojAssemblyReference.cache
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\obj\Debug\netcoreapp2.0\LuisBot.csproj.CoreCompileInputs.cache
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\obj\Debug\netcoreapp2.0\LuisBot.AssemblyInfoInputs.cache
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\obj\Debug\netcoreapp2.0\LuisBot.AssemblyInfo.cs
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\obj\Debug\netcoreapp2.0\LuisBot.dll
+C:\Users\pedro.santos\source\repos\12.nlp-with-luis\obj\Debug\netcoreapp2.0\LuisBot.pdb
